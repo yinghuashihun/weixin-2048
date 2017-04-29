@@ -1,0 +1,6 @@
+<!--pages/logs/logs.wxml-->
+<view class="container log-list">
+  <block wx:for="{{greets}}" wx:for-item="greet">
+    <text class="log-item"> {{greet}}</text>
+  </block>
+</view>

@@ -1,0 +1,4 @@
+/* pages/logs/logs.wxss */
+.log-item{
+    padding: 10px;
+}

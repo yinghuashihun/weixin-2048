@@ -1,0 +1,24 @@
+<scroll-view  scroll-y="true" scroll-x="true"> 
+
+<view>
+  <div class="score" style="color:#FFD306;margin-left:{{1.5*width}}px;"> 娱乐一下，欢迎使用</div>
+</view>
+<view>
+  <div class="score">
+
+    <p wx:if="{{status !== 1}}"> SCORE:<span>{{score}}</span> 
+    </p>
+    <p wx:if="{{status === 1}}" style="color:#FFA500" bindtap="restart"> Game over please try agin </p>
+  </div>
+</view>
+<view>
+  <!--<audio style="margin-left:15px;display:none" id="audio" loop='true' src="{{audioSrc}}" poster="{{audioPoster}}" name="{{audioName}}" author="{{audioAuthor}}" controls></audio>-->
+
+  <audio  style="margin-left:15px;display:none" id="audio" loop controls></audio>
+</view>
+<view>
+  <div class="gridPanel" bindtouchstart="touchStart" bindtouchmove="touchEnd">
+    <div wx:for-items="{{d}}" wx:key="*this" id="c{{index}}" class="{{c[index]}}" style="width:{{width}}px;height:{{width}}px;line-height: {{width}}px">{{item}}</div>
+  </div>
+</view>
+</scroll-view>
